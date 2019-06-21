@@ -4,6 +4,7 @@ const config = require('./config.json')
 
 let token = config.token
 let version = ('On Progress')
+let prefix = config.prefix
 
  client.login(token)
 

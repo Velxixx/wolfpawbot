@@ -1,0 +1,23 @@
+{
+  "name": "wolfpawbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarkWolfHD/wolfpawbot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarkWolfHD/wolfpawbot/issues"
+  },
+  "homepage": "https://github.com/DarkWolfHD/wolfpawbot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}

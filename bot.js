@@ -2,9 +2,9 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.json')
 
-let token = config.token;
-let version = ('On Progress');
-let prefix = config.prefix;
+let token = config.token
+let version = ('On Progress')
+let prefix = config.prefix
 
  client.login(token)
 
@@ -14,7 +14,7 @@ let prefix = config.prefix;
  });
 
    if(message.content.startsWith(prefix+'test')) {
-       message.channel.send('Functioning')
+      message.channel.send('Functioning')
    }
  
 

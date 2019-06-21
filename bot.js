@@ -5,18 +5,18 @@ const config = require('./config.json')
 let token = config.token
 let version = ('On Progress')
 let prefix = config.prefix
+let args = message.content.substring(prefix.lenght).split(" "); 
 
- client.login(token)
+ client.login(token);
 
  client.on("ready", () => {
     console.log("Bot Wolf Paws Online and Ready to Go!");
  
  });
 
- client.on("message", (message) => {
-    if(message.content.startsWith(prefix+"test")) {
-        message.channel.send("functioning")
-
- }});
+   if(message.content.startsWith(prefix+'test')) {
+       message.channel.send('Functioning')
+   }
+ 
 
 

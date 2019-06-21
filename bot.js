@@ -5,7 +5,6 @@ const config = require('./config.json')
 let token = config.token;
 let version = ('On Progress');
 let prefix = config.prefix;
-let args = message.content.substring(prefix.length).split(" ")
 
  client.login(token)
 

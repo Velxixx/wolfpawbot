@@ -20,9 +20,8 @@ let ping = client.ping
     if(message.content.toLowerCase() === prefix+'test')
       message.channel.send('Functional!')
       break;
- });
-
- let args = message.content.substring(prefix.length).split(' ');
+ 
+let args = message.content.substring(prefix.length).split(' ');
 
   switch(args[0]){
     case  prefix+'ping':
@@ -44,7 +43,12 @@ let ping = client.ping
         message.channel.sendEmbed(embed);
         break;
       }
-
+  
+  
+  
+  
+  
+  });
         
 
         

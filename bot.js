@@ -13,7 +13,6 @@ let token = config.token
  let ping = client.ping
  let prefix = config.prefix
  let version = ('On Progress')
- let args = message.content.substring(prefix.length).slit(" ")
 
  client.on("message", (message) => {
     if(message.author.bot)
@@ -22,6 +21,8 @@ let token = config.token
     if(message.content.toLowerCase() === prefix+'test')
       message.channel.send('Functional!');
 
+ var args = message.content.substring(prefix.length).slit(" ")
+ 
     switch(args[0]){
       case  prefix+'ping':
         message.reply(ping)

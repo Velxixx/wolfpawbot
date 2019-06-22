@@ -19,8 +19,11 @@ let ping = client.ping
 
     if(message.content.toLowerCase() === prefix+'test')
       message.channel.send('Functional!');
+
+ });
       
-  let args = message.content.substring(prefix.length).split(' ');
+let args = message.content.substring(prefix.length).split(' ');
+
   switch(args[0]){
       case  prefix+'ping':
         message.reply(ping)
@@ -39,13 +42,9 @@ let ping = client.ping
         var embed = new Discord.RichEmbed()
           .addField("Wolf Command", "Awesome Wolf Pictures")
         message.channel.sendEmbed(embed);
+        break;
       }
-  
-  
-  
-  
-  
-  });
+
         
 
         

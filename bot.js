@@ -12,14 +12,9 @@ let prefix = config.prefix
     console.log("Bot Wolf Paws Online and Ready to Go!");
  });
 
- client.on('message', message => {
-     if(message.author.bot)
-     return;
- });
-
-   if(message.content.startsWith(prefix+'test')) {
-      message.channel.send('Functioning')
-   }
- 
+ client.on("message", (message) => {
+    if(message.content.startsWith(prefix+"ping")) {
+        message.channel.send("pong")
+    }})
 
 

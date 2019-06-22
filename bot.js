@@ -19,23 +19,23 @@ let ping = client.ping
 
     if(message.content.toLowerCase() === prefix+'test')
       message.channel.send('Functional!');
-
+      
+  let args = message.content.substring(prefix.length).split(' ');
   switch(args[0]){
-    case  prefix+'ping':
-        var args = message.content.substring(prefix.length).split(' ');
+      case  prefix+'ping':
         message.reply(ping)
         break;
-    case prefix+'social':
+      case prefix+'social':
        if(args[1] === 'instagram'){
         message.channel.send('https://www.instagram.com/lonewolfdankmemes/')
         break;
       }
-    case prefix+'info' : 
+      case prefix+'info' : 
        if(args[1] === 'version'){(
         message.channel.send("Version "+version))
         break;
         }
-    case prefix+"help":
+      case prefix+"help":
         var embed = new Discord.RichEmbed()
           .addField("Wolf Command", "Awesome Wolf Pictures")
         message.channel.sendEmbed(embed);

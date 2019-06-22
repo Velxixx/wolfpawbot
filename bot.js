@@ -13,8 +13,11 @@ let prefix = config.prefix
  });
 
  client.on("message", (message) => {
-    if(message.content.startsWith(prefix+"ping")) {
-        message.channel.send("pong")
-    }})
+    if(message.author.bot)
+      return;
+
+    if(message.content.toLowerCase() === 'test')
+      message.channel.send('functional')
+ });
 
 

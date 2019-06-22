@@ -8,21 +8,19 @@ let token = config.token
 
  client.on("ready", () => {
     console.log("Bot Wolf Paws Online and Ready to Go!");
- });
+  });
 
- let ping = client.ping
  let prefix = config.prefix
- let version = ('On Progress')
 
- client.on("message", (message) => {
-    if(message.author.bot)
-      return;
+   client.on("message", (message) => {
+        if(message.content.startsWith(prefix+"test")) {
+            message.channel.send("pong")
+    }});
+    
+let ping = client.ping
+let version = ('On Progress')
+var args = message.content.substring(prefix.length).split(" ")
 
-    if(message.content.toLowerCase() === prefix+'test')
-      message.channel.send('Functional!');
-
- var args = message.content.substring(prefix.length).slit(" ")
- 
     switch(args[0]){
       case  prefix+'ping':
         message.reply(ping)
@@ -42,8 +40,8 @@ let token = config.token
           .addField("Wolf Command", "Awesome Wolf Pictures")
         message.channel.sendEmbed(embed);
         break;
-      }
-    });
+    }
+  
         
 
         

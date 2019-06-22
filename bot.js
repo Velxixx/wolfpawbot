@@ -6,6 +6,7 @@ let token = config.token
 let version = ('On Progress')
 let prefix = config.prefix
 let ping = client.ping
+let args = message.content.substring(prefix.length).split(' ')
 
  client.login(token)
 
@@ -21,8 +22,6 @@ let ping = client.ping
       message.channel.send('Functional!');
 
  });
-      
-let args = message.content.substring(prefix.length).split(' ');
 
   switch(args[0]){
       case  prefix+'ping':

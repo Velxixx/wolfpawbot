@@ -10,7 +10,11 @@ let prefix = config.prefix
 
  client.on("ready", () => {
     console.log("Bot Wolf Paws Online and Ready to Go!");
- 
+ });
+
+ client.on('message', message => {
+     if(message.author.bot)
+     return;
  });
 
    if(message.content.startsWith(prefix+'test')) {

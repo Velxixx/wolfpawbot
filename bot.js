@@ -19,9 +19,8 @@ let token = config.token
     
 let ping = client.ping
 let version = ('On Progress')
-var args = message.content.substring(prefix.length).split(" ")
 
-    switch(args[0]){
+    switch(arguments[0]){
       case  prefix+'ping':
         message.reply(ping)
         break;

@@ -2,17 +2,16 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.json')
 
-let token = config.token
-let version = ('On Progress')
-let prefix = config.prefix
-let ping = client.ping
-
-
  client.login(token)
 
  client.on("ready", () => {
     console.log("Bot Wolf Paws Online and Ready to Go!");
  });
+
+ let ping = client.ping
+ let prefix = config.prefix
+ let version = ('On Progress')
+ let args = message.content.substring(prefix.length).slit(" ")
 
  client.on("message", (message) => {
     if(message.author.bot)
@@ -20,8 +19,6 @@ let ping = client.ping
 
     if(message.content.toLowerCase() === prefix+'test')
       message.channel.send('Functional!');
-
-var args = message.content.substring(prefix.length).split(' ')
 
     switch(args[0]){
       case  prefix+'ping':

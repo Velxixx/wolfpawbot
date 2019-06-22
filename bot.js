@@ -5,6 +5,7 @@ const config = require('./config.json')
 let token = config.token
 let version = ('On Progress')
 let prefix = config.prefix
+let ping = client.ping
 
  client.login(token)
 
@@ -16,8 +17,39 @@ let prefix = config.prefix
     if(message.author.bot)
       return;
 
-    if(message.content.toLowerCase() === 'test')
-      message.channel.send('functional')
+    if(message.content.toLowerCase() === prefix+'test')
+      message.channel.send('Functional!')
+      break;
  });
+
+ let args = message.content.substring(prefix.length).split(' ');
+
+  switch(args[0]){
+    case  prefix+'ping':
+        message.reply(ping)
+        break;
+    case prefix+'social':
+       if(args[1] === 'instagram'){
+        message.channel.send('https://www.instagram.com/lonewolfdankmemes/')
+        break;
+      }
+    case prefix+'info' : 
+       if(args[1] === 'version'){(
+        message.channel.send("Version "+version))
+        break;
+        }
+    case prefix+"help":
+        var embed = new Discord.RichEmbed()
+          .addField("Wolf Command", "Awesome Wolf Pictures")
+        message.channel.sendEmbed(embed);
+        break;
+      }
+
+        
+
+        
+    
+
+  
 
 

@@ -19,11 +19,10 @@ let ping = client.ping
 
     if(message.content.toLowerCase() === prefix+'test')
       message.channel.send('Functional!');
- 
-let args = message.content.substring(prefix.length).split(' ');
 
   switch(args[0]){
     case  prefix+'ping':
+        var args = message.content.substring(prefix.length).split(' ');
         message.reply(ping)
         break;
     case prefix+'social':

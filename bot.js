@@ -41,7 +41,6 @@ let args = message.content.substring(prefix.length).split(' ');
         var embed = new Discord.RichEmbed()
           .addField("Wolf Command", "Awesome Wolf Pictures")
         message.channel.sendEmbed(embed);
-        break;
       }
   
   

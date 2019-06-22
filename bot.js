@@ -14,13 +14,12 @@ let token = config.token
 
    client.on("message", (message) => {
         if(message.content.startsWith(prefix+"test")) {
-            message.channel.send("pong")
-    }});
+            message.channel.send("Online!")
     
 let ping = client.ping
 let version = ('On Progress')
 
-    switch(arguments[0]){
+    switch(args[0]){
       case  prefix+'ping':
         message.reply(ping)
         break;
@@ -39,7 +38,11 @@ let version = ('On Progress')
           .addField("Wolf Command", "Awesome Wolf Pictures")
         message.channel.sendEmbed(embed);
         break;
-    }
+      } 
+    }     
+});
+    
+
   
         
 

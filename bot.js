@@ -19,7 +19,6 @@ let ping = client.ping
 
     if(message.content.toLowerCase() === prefix+'test')
       message.channel.send('Functional!')
-      break;
  
 let args = message.content.substring(prefix.length).split(' ');
 

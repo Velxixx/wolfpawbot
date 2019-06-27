@@ -77,7 +77,7 @@ const user = msg.mentions.users.first();
          user = msg.guild.members.get(args.slice(0, 1).join(' '));
          user = user.user;
     }catch (error){
-        return msg.reply('`❌ Invalid User ID`');
+        return msg.reply;
     }
   }
   

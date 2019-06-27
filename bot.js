@@ -60,7 +60,7 @@ msg.channel.send(word_spam)
 
 }
 //CLEAR
-if(command === "clear") {
+if(command === "zoom") {
   if(!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.reply("`❌ You don't have the requirements to use this command.`")
   if(!args[0]) return msg.channel.send("`Error! 📌 Please specify the amount of messages to delete`");
   msg.channel.bulkDelete(args[0]).then(() => {
@@ -97,7 +97,7 @@ const user = msg.mentions.users.first();
   
   });
   
-  const modlogChannelID = '<592136230574227493>';
+  const modlogChannelID = '<587489117827497984>';
     if (modlogChannelID.length !== 0) {
     if (!bot.channels.get(modlogChannelID )) return undefined;
   const banConfirmationEmbedModlog = new Discord.RichEmbed()

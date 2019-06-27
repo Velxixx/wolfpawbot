@@ -38,11 +38,11 @@ const cfg = require('./config.json')
     .setThumbnail(msg.author.displayAvatarURL)
     .setTimestamp()
     .setURL("")
-    .addField("👋 Social", "||**`instagram`**||  ||**`twitter`**||  ||**`discord`**||", true)
-    .addField("🎮 Games", "||**`non yet`**||", true)
-    .addField("🔨 Moderation", "**`clear`** `ban` ||**`mute`**||  ||**`tempmute`**||",true)
-    .addField("🔀 Random Commands", "**`wolf`** **`spam`**", true)
-    .addField("📒 General Info", "**`ping`** **`version`**")
+    .addField("👋  Social", "||**`instagram`**||  ||**`twitter`**||  ||**`discord`**||", true)
+    .addField("🎮  Games", "||**`non yet`**||", true)
+    .addField("🔨  Moderation", "**`clear`** `ban` ||**`mute`**||  ||**`tempmute`**||",true)
+    .addField("🔀  Random Commands", "||**`wolf`**|| **`spam`**", true)
+    .addField("📒  General Info", "**`ping`** **`version`**")
     msg.channel.send({embed})
      }
     if(command === 'version') {
@@ -60,10 +60,10 @@ msg.channel.send(word_spam)
 
 }
 //CLEAR
-if(command === "zoom") {
+if(command === "clear") {
   if(!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.reply("`❌ You don't have the requirements to use this command.`")
   if(!args[0]) return msg.channel.send("`Error! 📌 Please specify the amount of messages to delete`");
-  msg.channel.bulkDelete(100,args[0]).then(() => {
+  msg.channel.bulkDelete(args[0]).then(() => {
     msg.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(3000));
   });
 }
@@ -97,7 +97,7 @@ const user = msg.mentions.users.first();
   
   });
   
-  const modlogChannelID = '<587489117827497984>';
+  const modlogChannelID = '587489117827497984';
     if (modlogChannelID.length !== 0) {
     if (!bot.channels.get(modlogChannelID )) return undefined;
   const banConfirmationEmbedModlog = new Discord.RichEmbed()

@@ -63,8 +63,8 @@ msg.channel.send(word_spam)
 if(command === "zoom") {
   if(!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.reply("`❌ You don't have the requirements to use this command.`")
   if(!args[0]) return msg.channel.send("`Error! 📌 Please specify the amount of messages to delete`");
-  msg.channel.bulkDelete(args[0]).then(() => {
-    msg.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
+  msg.channel.bulkDelete(100,args[0]).then(() => {
+    msg.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(3000));
   });
 }
 //BAN

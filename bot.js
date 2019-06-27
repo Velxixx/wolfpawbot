@@ -97,7 +97,7 @@ const user = msg.mentions.users.first();
   
   });
   
-  const modlogChannelID = '<590282992124166156>';
+  const modlogChannelID = '<592136230574227493>';
     if (modlogChannelID.length !== 0) {
     if (!bot.channels.get(modlogChannelID )) return undefined;
   const banConfirmationEmbedModlog = new Discord.RichEmbed()

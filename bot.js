@@ -38,11 +38,11 @@ const cfg = require('./config.json')
     .setThumbnail(msg.author.displayAvatarURL)
     .setTimestamp()
     .setURL("")
-    .addField("Social", "||**`instagram`**||  ||**`twitter`**||  ||**`discord`**||", true)
-    .addField("Games", "||**`non yet`**||", true)
-    .addField("Moderation", "**`clear`** `ban` ||**`mute`**||  ||**`tempmute`**||",true)
-    .addField("Random Commands", "**`wolf`** **`spam`**", true)
-    .addField("General Info", "**`ping`** **`version`**")
+    .addField("👋 Social", "||**`instagram`**||  ||**`twitter`**||  ||**`discord`**||", true)
+    .addField("🎮 Games", "||**`non yet`**||", true)
+    .addField("🔨 Moderation", "**`clear`** `ban` ||**`mute`**||  ||**`tempmute`**||",true)
+    .addField("🔀 Random Commands", "**`wolf`** **`spam`**", true)
+    .addField("📒 General Info", "**`ping`** **`version`**")
     msg.channel.send({embed})
      }
     if(command === 'version') {
@@ -61,8 +61,8 @@ msg.channel.send(word_spam)
 }
 //CLEAR
 if(command === "clear") {
-  if(!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.reply("`You don't have the requirements to use this command.`")
-  if(!args[0]) return msg.channel.send("`Error! Please specify the amount of messages to delete`");
+  if(!msg.member.hasPermission('MANAGE_MESSAGES')) return msg.reply("`❌ You don't have the requirements to use this command.`")
+  if(!args[0]) return msg.channel.send("`Error! 📌 Please specify the amount of messages to delete`");
   msg.channel.bulkDelete(args[0]).then(() => {
     msg.channel.send(`Cleared ${args[0]} messages.`).then(msg => msg.delete(5000));
   });
@@ -73,19 +73,19 @@ const user = msg.mentions.users.first();
   if (!user) {
     try {
     
-    if(!msg.guild.members.get(args.slice(0, 1).join(' '))) throw new Error('`Invalid User ID`');
+    if(!msg.guild.members.get(args.slice(0, 1).join(' '))) throw new Error('`❌ Invalid User ID`');
          user = msg.guild.members.get(args.slice(0, 1).join(' '));
          user = user.user;
     }catch (error){
-        return msg.reply('`Invalid User ID`');
+        return msg.reply('`❌ Invalid User ID`');
     }
   }
   
   const banReason = args.slice(1).join(' ');
   
     if(user === msg.author) return msg.channel.send("`Really? You can't ban yourself`");
-    if(!banReason) return msg.reply('`You forgot to enter a reason for this ban!`');
-    if(!msg.guild.member(user).bannable) return msg.reply("`You can't ban a wolf that is superior to you`");
+    if(!banReason) return msg.reply('`❌ You forgot to enter a reason for this ban!`');
+    if(!msg.guild.member(user).bannable) return msg.reply("`📥 You can't ban a wolf that is superior to you`");
   
   await msg.guild.ban(user)
     

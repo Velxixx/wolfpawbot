@@ -198,6 +198,7 @@ bot.on('message', async msg => {
     
     "\nHey now you're an All Star get your game on, go play",
     "Hey now you're a Rock Star get the show on get paid", ])
+    .setColor(0x00ff00)
 
     msg.channel.send({
       embed: embedshrek

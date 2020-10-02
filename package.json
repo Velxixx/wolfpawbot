@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-postbuild": "npm run bot.js",
+    "heroku-postbuild": "npm run build",
     "start": "node bot.js"
   },
   "repository": {
